@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>common constructor</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+   {
+    height: 200px;
+    background: #f0eeee;
+  }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  * {box-sizing: border-box;}
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+  }
+  
+  .topnav a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #0b0bec81;
+    color: white;
+  }
+  
+  .topnav .search-container {
+    float: right;
+  }
+  
+  .topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #ccc;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: right;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: right;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 10;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+  }
+  </style>
+
+<style>
+/* Gray */
+.default {
+  border-color: #fffdfd;
+  color: black;
+}
+
+.default:hover {
+  background: #ffffff;
+}
+</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#myDIV {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  margin-top: 20px;
+}
+</style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ffffff;
+  background-color: #ffffff;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 6px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #faf6f6;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ffffff;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ffffff;
+  border-top: none;
+}
+</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 6px 6px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+
+
+</head>
+<body>
+  
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<div id="main">
+  
+  <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+</div>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+    <div class="jumbotron text-center" style="margin: bottom 2px;">
+        <h1>common constructor  </h1>
+        <p>construct a dream project </p>  
+      </div>
+      
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <nav class="navbar navbar-white">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <style>
+              img {
+                height: 200px;
+                : #f0eeee;
+              }
+              </style>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Home')">Information of company</button>
+  <button class="tablinks" onclick="openCity(event, 'Landscape')">Landscape</button>
+  <button class="tablinks" onclick="openCity(event, 'Architecture')">Architecture</button>
+  <button class="tablinks" onclick="openCity(event, 'Planning')">Planning</button>
+  <button class="tablinks" onclick="openCity(event, 'Product')">Product</button>
+  <button class="tablinks" onclick="openCity(event, 'Hide')">Hide</button>
+</div>
+
+<div id="Home" class="tabcontent">
+  <h3>About company</h3>
+<P>Construction management companies are the boots on the ground,
+  overseeing every aspect of a construction project — including accounting, 
+  staffing project managers, hiring specialty contractors, or even hiring several GCs 
+  if the project warrants it.</P>
+  <h3>History of company</h3>
+  <p>The industry can also be classified into sectors or markets.[7] For example, Engineering News-Record (ENR), a US-based construction trade magazine, has compiled and reported data about the size of design and construction contractors. In 2014, it split the data into nine market segments: transportation, petroleum, buildings, power, industrial, water, manufacturing, sewage.</p>
+  <h3> Working of company </h3>
+  <P> A construction company's primary function is to develop, coordinate, and manage various construction projects. This involves many tasks ranging from project planning, budgeting, and scheduling to executing the construction work and ensuring that the finished product adheres to the stipulated standards.</P>
+</div>
+
+<div id="Landscape" class="tabcontent">
+  <!-- Header -->
+<div class="header" id="myHeader">
+  
+  <button class="btn" onclick="one()">Public relam</button>
+  <button class="btn active" onclick="two()">park</button>
+  <button class="btn" onclick="four()">garden</button>
+</div>
+
+
+<script>
+// Get the elements with class="column"
+var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+var i;
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+  <h3>building picture:</h3>
+  <p> </p>
+  <h3>uae-pavilion-big-designboom <picture><img src="uae-pavilion-big-designboom-01.jpg" alt="uae-pavilion-big-designboom-01" width="300" height="3000"></picture></h3>
+  <h4>Not a hotel setouchi  in japan <picture><img src="hotelinjapan.jpg" alt="hotelinjapan" width="300" height="3000">
+  </picture></h4>
+  <h5>Getephu mindfullness city in butan <picture>  <img src="image.jpg" alt="image" width="300" height="3000">
+  </picture></h5>
+</div>
+
+<div id="Architecture" class="tabcontent">
+  <h3>uae-pavilion-big-designboom:</h3>
+  <img src="uae-pavilion-big-designboom-01.jpg" alt="uae-pavilion-big-designboom-01" width="300" height="3000">  
+  <P>  </P>
+  <p>The pavilion design, which spanned an area of 2,290 square metres, was inspired by the Ghaf tree
+    the UAE's national tree, following the path of its roots to its branches and leaves and featuring
+     rammed earth walls built from locally sourced materials and a roof made with palm leaves.
+     The pavilion also contained a garden with local plants, including fruit trees, flowers, spices, herbs, and medicinal plants, 
+     among others.The meeting was attended by H.H. Sheikh Hamdan bin Mohamed bin Zayed Al Nahyan, 
+     Sheikh Mohammed bin Hamad bin Tahnoun Al Nahyan, Advisor for Special Affairs at the Ministry of Presidential Court,
+      and a number of officials.</p>
+      <h3> Not a hotel setouchi  in japan: </h3>
+      <img src="hotelinjapan.jpg" alt="hotelinjapan" width="300" height="3000">
+      <P>  </P>
+      <P>
+        which was first unveiled at the start of this year. The project is set to weave a design-minded, 
+      residential escape into the scenic and remote landscape of Sagishima Island, Japan. The group’s design for NOT A HOTEL Setouchi, 
+      the newest addition to the hospitality brand’s portfolio, will take shape as a hybrid of Scandinavian and Japanese design principles.
+      </P>
+      <h3>Getephu mindfullness city in butan:</h3>
+      <img src="image.jpg" alt="image" width="300" height="3000">
+      <P>  </P>
+      <p>
+        The Kingdom of Bhutan, world-renowned for creating the concept of Gross National Happiness (GNH) and 
+      for being the first carbon negative country, is now launching the Gelephu Mindfulness City, an interconnected bridge of 
+      sustainable development between South and Southeast Asia. I was part of a 
+      select delegation given a tour by King Jigme Khesar Namgyel Wangchuck himself.
+      </p>
+      <h3>copenhill: <picture><img src="vip.jpg" alt="vip" width="300" height="3000"></picture></h3>
+      <P> Amager Bakke (lit. 'Amager Hill'), also known as Amager Slope or Copenhill, is a combined heat and power waste-to-energy plant (new resource handling centre) and recreational facility in Amager, Copenhagen Denmark,[1] located prominently within view of the city's downtown. </P>
+</div>
+<div id="Planning" class="tabcontent">
+  <h2> planning process</h2>
+    <img src="Construction-Project-Steps.jpg" alt="Construction-Project-Steps" width="300" height="3000">
+    <P>1:  Conception Establishing a vision </P>
+    <P>2: Team & Delivery Selection
+      Determining the best partners and delivery method type for your project needs. "Time varies depending on method selected  
+     </P>
+    <P>3: Design
+      Creating a design and turning it into drawings.
+    </P>
+  <P> 4: Precon
+    Budgeting, scheduling, logistics, and setting your project up for success
+   </P>
+  <P> 5:Construction As precon & procurement wrap up, construction kicks off & continues through completion.  </P>
+  <P> 6: Close-Out
+    The team wraps up & turns over the building </P>
+    
+ <P>   </P>
+ <P>   </P>
+ <P>   </P>
+<h3>Claremont McKenna College</h3>
+  <img src="bigdk.jpg" alt="bigdk" width="300" height="3000">
+    <P>   </P>
+    <P>   </P>
+    <P>   </P>
+<h3>Sluishuis Residences</h3>
+  <img src="barcode.jpg" alt="barcode" width="300" height="3000">
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+<h3>uae-pavilion-big-designboom</h3>
+  <img src="uae-pavilion-big-designboom-01.jpg" alt="uae-pavilion-big-designboom-01" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3>Aqaba-Container-Terminal-ACT-3</h3>
+  <img src="Aqaba-Container-Terminal-ACT-3.jpg" alt="Aqaba-Container-Terminal-ACT-3" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3>Toyota Woven City</h3>
+  <img src="urban.jpg" alt="urban" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3>Education Esbjerb </h3>
+  <img src="education.jpg" alt="education" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3> Oceanix city</h3>
+  <img src="city.jpg" alt="city" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3> Biodiveger city</h3>
+  <img src="master.jpg" alt="master" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3>Oakland masterplan</h3>
+  <img src="host.jpg" alt="host" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3>Claremont McKenna College</h3>
+  <img src="bigdk.jpg" alt="bigdk" width="300" height="3000">
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+<h3>Sluishuis Residences</h3>
+<img src="barcode.jpg" alt="barcode" width="300" height="3000">
+<P>   </P>
+<P>   </P>
+<P>   </P>
+<h3> uae-pavilion-big-designboom</h3>
+<img src="uae-pavilion-big-designboom-01.jpg" alt="uae-pavilion-big-designboom-01" width="300" height="3000">  
+<P>   </P>
+<P>   </P>
+<P>   </P>
+<h3> Aqaba-Container-Terminal-ACT-3</h3>
+<img src="Aqaba-Container-Terminal-ACT-3.jpg" alt="Aqaba-Container-Terminal-ACT-3" width="300" height="3000">  
+<P>   </P>
+<P>   </P>
+<P>   </P>
+<h3> Toyota Woven City</h3>
+<img src="urban.jpg" alt="urban" width="300" height="3000">  
+<P>   </P>
+<P>   </P>
+<P>   </P>
+<h3> Education Esbjerb </h3>
+<img src="education.jpg" alt="education" width="300" height="3000">  
+<P>   </P>
+<P>   </P>
+<P>   </P>
+<h3> Oceanix city </h3>
+<img src="city.jpg" alt="city" width="300" height="3000">  
+<P>   </P>
+<P>   </P>
+<P>   </P>
+<h3> Biodiveger city </h3>
+<img src="master.jpg" alt="master" width="300" height="3000">  
+<P>   </P>
+<P>   </P>
+<P>   </P>
+<h3> Oakland masterplan </h3>
+<img src="host.jpg" alt="host" width="300" height="3000">  
+<P>   </P>
+<P>   </P>
+<P>   </P>
+</div>
+<div id="Product" class="tabcontent">
+  <h3> BJARK ingelsvine </h3>
+  <img src="bjark ingelsvine.jpg" alt="bjark" width="300" height="3000">
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3> Nawabari-environmental </h3>
+  <img src="nawabari-environmental-2.jpg" alt="nawabari-environmental-2" width="300" height="3000">
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3>Stella nebula lamp</h3>
+  <img src="stella nebula lamp.jpeg" alt="stella" width="300" height="3000">
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3>Virgin-Hyperloop </h3>
+  <img src="Virgin-Hyperloop.jpg" alt="Virgin-Hyperloop" width="300" height="3000">
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3> lilium table </h3>
+  <img src="lilium table.jpg" alt="lilium" width="300" height="3000">
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3> puzzel house</h3>
+  <img src="5db9c4cabe.jfif" alt="5db9c4cabe" width="300" height="3000">
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+          </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="column">
+          <div class="col-sm-100">
+<h3> Harbor masterplan</h3>
+    <img src="landscape.jpg" alt="landscape" width="300" height="3000">
+    
+      
+      <style>
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        </style>
+ 
+ <P>   </P>
+ <P>   </P>
+ <P>   </P>
+<h3>Claremont McKenna College</h3>
+  <img src="bigdk.jpg" alt="bigdk" width="300" height="3000">
+    <P>   </P>
+    <P>   </P>
+    <P>   </P>
+<h3>Sluishuis Residences</h3>
+  <img src="barcode.jpg" alt="barcode" width="300" height="3000">
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+<h3>uae-pavilion-big-designboom</h3>
+  <img src="uae-pavilion-big-designboom-01.jpg" alt="uae-pavilion-big-designboom-01" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3>Aqaba-Container-Terminal-ACT-3</h3>
+  <img src="Aqaba-Container-Terminal-ACT-3.jpg" alt="Aqaba-Container-Terminal-ACT-3" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3>Toyota Woven City</h3>
+  <img src="urban.jpg" alt="urban" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3>Education Esbjerb </h3>
+  <img src="education.jpg" alt="education" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3> Oceanix city</h3>
+  <img src="city.jpg" alt="city" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3> Biodiveger city</h3>
+  <img src="master.jpg" alt="master" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+  <h3>Oakland masterplan</h3>
+  <img src="host.jpg" alt="host" width="300" height="3000">  
+  <P>   </P>
+  <P>   </P>
+  <P>   </P>
+</body>
+</html>
